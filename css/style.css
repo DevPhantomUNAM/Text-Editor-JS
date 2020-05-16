@@ -1,0 +1,60 @@
+#exampleFormControlTextarea1{
+    width: 100%;
+}
+
+textarea{
+    background-color: #FAFAFA;
+    border: #EFEFEF solid 1px;
+    color: #333;
+    
+}
+
+iframe{
+    width: 100%;
+    height: 50vh;
+    background-color: #FAFAFA;
+    border: #EFEFEF solid 1px;
+    color: #333333;
+    font-family: Calibri,Verdana,Helvetica,sans-serif;
+}
+
+button{
+}
+
+#Arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Comic{
+    font-family: "Comic Sans MS",cursive,sans-serif ;
+}
+
+#Courtier{
+    font-family: Courtier, sans-serif;
+}
+#Georgia{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#Tahoma{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Verdana{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#dropdownMenuButtonHeading{
+    text-align: left;
+    width: 150px;
+    max-width: 150px;
+}
+
+label {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+ }
+ 
+ #upload {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }

@@ -1,0 +1,27 @@
+Realizar un editor de Texto enriqucido sencillo
+
+FUncionalidades que debe tener el editor
+Formatos de la fuente
+
+insercion de imagenes desde una URL
+Sistema Local
+
+Uso de Portapapeles para copiar y pegar al menos fragmentos de Texto
+Guardar y recuperar en del Local Storage el documento actual completo
+
+Arrastrar y soltrar imagenes sobre el editor (opcionales)
+Cargar y guardar un documento desde el sistema local (opcionales)
+Deshacer y rehacer (opcionales)
+
+
+
+Negrita, italica y subrayado de Texto
+
+-Colores
+-tamaños
+-listas y viñetas
+-Ajustes y centrados de Texto
+
+Formatos de cabecera((h1,H2)
+
+Insercuin de hipervinculos
