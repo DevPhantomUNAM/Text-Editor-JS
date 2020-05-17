@@ -2,18 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Iconos para botones -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Hoja de estilos -->
     <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/Bootstrap/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CDN de Jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
     <title>Editor de Texto</title>
 </head>
 <body onload="enableEditMode()">
     <section>
+        
         <div class="container">
+            <h1>Editor de texto</h1>
             <div class="row botones">
                 <div class="col-12">           
                     <button class="btn " id="buttonBold"><span class="fa fa-bold"></span></button>
@@ -30,84 +39,71 @@
                     <button class="btn " id="buttonCut"><span class="fa fa-cut"></span></button>
                     <button class="btn " id="buttonCopy"><span class="fa fa-copy"></span></button> 
                     <button class="btn " id="buttonListOl"><span class="fa fa-list-ol"></span></button>  
-                    <button class="btn " id="buttonListUl"><span class="fa fa-list-ul"></span></button>               
+                    <button class="btn " id="buttonListUl"><span class="fa fa-list-ul"></span></button>  
+                    <button class="btn " id="buttonLink"><span class="fa fa-link"></span></button>             
                     <button class="btn " id="buttonImage"><span class="fa fa-image"></span></button>
-                    <button class="btn " id="buttonLink"><span class="fa fa-link"></span></button>
-                    <label for="upload"><span class="fa fa-upload"></span></label>
+                    
+                    <label for="upload" class="btn"><span class="fa fa-upload"></span></label>
                     <input type="file" onchange="previewFile()" id="upload"  ><br>
-                    <!-- <input type="file" name="photo" id="upload-photo" /> -->
-
-                    <!-- <input  class="" type="file" id="upload" accept="image/*" value="None"> -->
+                   
                     
                 </div>
             </div>
             <div class="row">
-                <div class="btn-group">
-                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButtonFonts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Texto normal
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonFonts">
-                        <a class="dropdown-item" id="h1" >H1</a>
-                        <a class="dropdown-item" id="h2" >H2</a>
-                        <a class="dropdown-item" id="h3" >H3</a>
-                        <a class="dropdown-item" id="h4" >H4</a>
-                        <a class="dropdown-item" id="h5" >H5</a>       
+                <div class="col-12">
+                    <div class="btn-group">
+                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButtonFonts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Texto normal
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonFonts">
+                            <a class="dropdown-item" id="h1" >H1</a>
+                            <a class="dropdown-item" id="h2" >H2</a>
+                            <a class="dropdown-item" id="h3" >H3</a>
+                            <a class="dropdown-item" id="h4" >H4</a>
+                            <a class="dropdown-item" id="h5" >H5</a>       
+                        </div>
                     </div>
-                </div>
-                <div class="btn-group">
-                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButtonHeading" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Arial
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHeading">
-                        
-                        <a class="dropdown-item" id="Arial">Arial</a>
-                        <a class="dropdown-item" id="Comic">Comic Sans MS</a>
-                        <a class="dropdown-item" id="Courtier">Courtier</a>
-                        <a class="dropdown-item" id="Georgia">Georgia</a>
-                        <a class="dropdown-item" id="Tahoma">Tahoma</a>
-                        <a class="dropdown-item" id="Verdana">Verdana</a>                            
+                    <div class="btn-group">
+                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButtonHeading" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Arial
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHeading">
+                            <a class="dropdown-item" id="Arial">Arial</a>
+                            <a class="dropdown-item" id="Comic">Comic Sans MS</a>
+                            <a class="dropdown-item" id="Courtier">Courtier</a>
+                            <a class="dropdown-item" id="Georgia">Georgia</a>
+                            <a class="dropdown-item" id="Tahoma">Tahoma</a>
+                            <a class="dropdown-item" id="Verdana">Verdana</a>                            
+                        </div>
                     </div>
-                </div>
-                <div class="btn-group">
-                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButtonSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        11
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonSize">
-                    <a class="dropdown-item" id="ocho">8</a>
-                    <a class="dropdown-item" id="nueve">9</a>
-                    <a class="dropdown-item" id="diez">10</a>
-                    <a class="dropdown-item" id="once">11</a>
-                    <a class="dropdown-item" id="doce">12</a>
-                    <a class="dropdown-item" id="catorce">14</a>
-                    <a class="dropdown-item" id="dieciocho">18</a>
-                                         
+                    <div class="btn-group">
+                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButtonSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            11
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonSize">
+                        <a class="dropdown-item" id="ocho">8</a>
+                        <a class="dropdown-item" id="nueve">9</a>
+                        <a class="dropdown-item" id="diez">10</a>
+                        <a class="dropdown-item" id="once">11</a>
+                        <a class="dropdown-item" id="doce">12</a>
+                        <a class="dropdown-item" id="catorce">14</a>
+                        <a class="dropdown-item" id="dieciocho">18</a>
+                                             
+                        </div>
                     </div>
+                    
+                    <button class="btn">Color de texto <input value="#EAEAEA" type="color" id="foreColor"></button>
+                    <button class="btn">Color de fondo <input value="#EAEAEA" type="color" id="hiliteColor"></button>
                 </div>
                 
-                <button class="btn">Color de texto <input value="#EAEAEA" type="color" id="foreColor"></button>
-                <button class="btn">Color de fondo <input value="#EAEAEA" type="color" id="hiliteColor"></button>
-                
-                
-
             </div>
             <div class="row caja">
                 <div class="col-12">
-
                     <iframe src="" frameborder="0" name="textField"></iframe>
-                    <!-- <div class="page-wrapper box-content">
-                        <textarea class="form-control content" id="exampleFormControlTextarea1" rows="15" name="example"></textarea>            
-                    </div>                     -->
                 </div>
             </div>
         </div>
     </section>
-    
-    
-
-    
-
     <script src="js/main.js"></script>   
-    
-
 </body>
 </html>

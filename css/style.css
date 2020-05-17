@@ -2,11 +2,10 @@
     width: 100%;
 }
 
-textarea{
-    background-color: #FAFAFA;
-    border: #EFEFEF solid 1px;
-    color: #333;
-    
+.container{
+    margin-top: 10vh;
+    box-shadow: 0 0 20px 0 #999;
+    padding: 4vh;
 }
 
 iframe{
@@ -19,6 +18,9 @@ iframe{
 }
 
 button{
+    margin: 5px;
+    margin-bottom: 7px;
+    background-color: #EFEFEF;
 }
 
 #Arial{
@@ -50,6 +52,7 @@ button{
 
 label {
     cursor: pointer;
+    
     /* Style as you please, it will become the visible UI component. */
  }
  
@@ -58,3 +61,5 @@ label {
     position: absolute;
     z-index: -1;
  }
+
+ 
